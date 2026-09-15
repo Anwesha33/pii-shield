@@ -1,0 +1,5 @@
+.env
+*.env
+bin/
+dist/
+.DS_Store
