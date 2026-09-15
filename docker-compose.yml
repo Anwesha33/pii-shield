@@ -1,0 +1,25 @@
+services:
+  pii-shield:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      # Supplied from the host; never baked into the image or committed.
+      GEMINI_API_KEY: ${GEMINI_API_KEY:?set GEMINI_API_KEY in your environment or .env}
+    command: ["-config", "/etc/pii-shield/config.yaml"]
+    volumes:
+      - ./config.yaml:/etc/pii-shield/config.yaml:ro
+    healthcheck:
+      test: ["CMD", "/pii-shield", "-h"]
+      interval: 10s
+      timeout: 2s
+      retries: 3
+
+  prometheus:
+    image: prom/prometheus:v2.54.1
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./deploy/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    depends_on:
+      - pii-shield

@@ -1,0 +1,67 @@
+# PIIShield configuration.
+#
+# Secrets are never stored here: upstream_api_key_env names an environment
+# variable, so this file is safe to commit.
+
+listen: ":8080"
+
+# Any OpenAI-compatible base URL. Gemini exposes one, which is why the proxy
+# needs no provider-specific code.
+upstream: "https://generativelanguage.googleapis.com/v1beta/openai"
+upstream_api_key_env: "GEMINI_API_KEY"
+upstream_auth_style: "bearer"
+
+timeout: 60s
+scan_responses: true
+log_decisions: true
+
+# Action applied to any entity type without an explicit rule below.
+default_action: redact
+
+rules:
+  # Credentials are blocked outright rather than redacted. A tokenized API key
+  # is still an API key once the response is re-hydrated, and no legitimate
+  # prompt needs to contain one.
+  - type: API_KEY
+    action: block
+    min_confidence: 0.9
+  - type: JWT
+    action: block
+    min_confidence: 0.9
+
+  # Card numbers are masked, not tokenized: the caller does not need the full
+  # number back, and not holding it in the vault at all is strictly safer.
+  - type: CREDIT_CARD
+    action: mask
+    min_confidence: 0.9
+
+  # Everything below is reversibly tokenized, so the caller gets their data
+  # back while the model never sees it.
+  - type: EMAIL
+    action: redact
+    min_confidence: 0.9
+  - type: PHONE_IN
+    action: redact
+    min_confidence: 0.9
+  - type: AADHAAR
+    action: redact
+    min_confidence: 0.9
+  - type: PAN
+    action: redact
+    min_confidence: 0.9
+  - type: UPI_ID
+    action: redact
+    min_confidence: 0.9
+  - type: IFSC
+    action: redact
+    min_confidence: 0.9
+  - type: PERSON_NAME
+    action: redact
+    min_confidence: 0.5
+
+  # IP addresses are frequently version strings or infrastructure references
+  # rather than personal data, so this class is left on but at a lower action
+  # tier. Set to "allow" if your traffic is mostly engineering discussion.
+  - type: IP_ADDRESS
+    action: redact
+    min_confidence: 0.8
