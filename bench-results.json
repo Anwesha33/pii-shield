@@ -1,0 +1,212 @@
+{
+  "documents": 250,
+  "labeled_spans": 389,
+  "strict": {
+    "AADHAAR": {
+      "tp": 39,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "API_KEY": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "CREDIT_CARD": {
+      "tp": 37,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "EMAIL": {
+      "tp": 35,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IFSC": {
+      "tp": 43,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IP_ADDRESS": {
+      "tp": 32,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "JWT": {
+      "tp": 29,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PAN": {
+      "tp": 33,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PHONE_IN": {
+      "tp": 37,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PHONE_US": {
+      "tp": 33,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "UPI_ID": {
+      "tp": 33,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    }
+  },
+  "relaxed": {
+    "AADHAAR": {
+      "tp": 39,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "API_KEY": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "CREDIT_CARD": {
+      "tp": 37,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "EMAIL": {
+      "tp": 35,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IFSC": {
+      "tp": 43,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IP_ADDRESS": {
+      "tp": 32,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "JWT": {
+      "tp": 29,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PAN": {
+      "tp": 33,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PHONE_IN": {
+      "tp": 37,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PHONE_US": {
+      "tp": 33,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "UPI_ID": {
+      "tp": 33,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    }
+  },
+  "strict_overall": {
+    "tp": 389,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1,
+    "recall": 1,
+    "f1": 1
+  },
+  "relaxed_overall": {
+    "tp": 389,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1,
+    "recall": 1,
+    "f1": 1
+  },
+  "latency": {
+    "docs": 250,
+    "iterations": 20,
+    "mean_micros": 34.3446,
+    "p50_micros": 31,
+    "p95_micros": 67,
+    "p99_micros": 89,
+    "max_micros": 201,
+    "docs_per_second": 29116.65880516879
+  },
+  "generated_at": "2026-09-15T20:19:11Z",
+  "sample_false_positives": null
+}

@@ -1,0 +1,263 @@
+{
+  "documents": 210,
+  "labeled_spans": 257,
+  "strict": {
+    "AADHAAR": {
+      "tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "API_KEY": {
+      "tp": 23,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "CREDIT_CARD": {
+      "tp": 23,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "EMAIL": {
+      "tp": 27,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IFSC": {
+      "tp": 24,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IP_ADDRESS": {
+      "tp": 27,
+      "fp": 16,
+      "fn": 0,
+      "precision": 0.627906976744186,
+      "recall": 1,
+      "f1": 0.7714285714285715
+    },
+    "JWT": {
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PAN": {
+      "tp": 22,
+      "fp": 6,
+      "fn": 0,
+      "precision": 0.7857142857142857,
+      "recall": 1,
+      "f1": 0.88
+    },
+    "PHONE_IN": {
+      "tp": 25,
+      "fp": 10,
+      "fn": 0,
+      "precision": 0.7142857142857143,
+      "recall": 1,
+      "f1": 0.8333333333333333
+    },
+    "PHONE_US": {
+      "tp": 30,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "UPI_ID": {
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    }
+  },
+  "relaxed": {
+    "AADHAAR": {
+      "tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "API_KEY": {
+      "tp": 23,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "CREDIT_CARD": {
+      "tp": 23,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "EMAIL": {
+      "tp": 27,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IFSC": {
+      "tp": 24,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IP_ADDRESS": {
+      "tp": 27,
+      "fp": 16,
+      "fn": 0,
+      "precision": 0.627906976744186,
+      "recall": 1,
+      "f1": 0.7714285714285715
+    },
+    "JWT": {
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PAN": {
+      "tp": 22,
+      "fp": 6,
+      "fn": 0,
+      "precision": 0.7857142857142857,
+      "recall": 1,
+      "f1": 0.88
+    },
+    "PHONE_IN": {
+      "tp": 25,
+      "fp": 10,
+      "fn": 0,
+      "precision": 0.7142857142857143,
+      "recall": 1,
+      "f1": 0.8333333333333333
+    },
+    "PHONE_US": {
+      "tp": 30,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "UPI_ID": {
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    }
+  },
+  "strict_overall": {
+    "tp": 257,
+    "fp": 32,
+    "fn": 0,
+    "precision": 0.889273356401384,
+    "recall": 1,
+    "f1": 0.9413919413919413
+  },
+  "relaxed_overall": {
+    "tp": 257,
+    "fp": 32,
+    "fn": 0,
+    "precision": 0.889273356401384,
+    "recall": 1,
+    "f1": 0.9413919413919413
+  },
+  "latency": {
+    "docs": 210,
+    "iterations": 20,
+    "mean_micros": 36.80714285714286,
+    "p50_micros": 34,
+    "p95_micros": 66,
+    "p99_micros": 87,
+    "max_micros": 578,
+    "docs_per_second": 27168.639627401513
+  },
+  "generated_at": "2026-09-15T20:20:07Z",
+  "sample_false_positives": [
+    {
+      "doc_id": "hold-0009",
+      "type": "PHONE_IN",
+      "value": "9988776655"
+    },
+    {
+      "doc_id": "hold-0012",
+      "type": "PHONE_IN",
+      "value": "9988776655"
+    },
+    {
+      "doc_id": "hold-0014",
+      "type": "PHONE_IN",
+      "value": "9988776655"
+    },
+    {
+      "doc_id": "hold-0015",
+      "type": "PHONE_IN",
+      "value": "9988776655"
+    },
+    {
+      "doc_id": "hold-0019",
+      "type": "PAN",
+      "value": "AAAAA0000A"
+    },
+    {
+      "doc_id": "hold-0023",
+      "type": "PAN",
+      "value": "AAAAA0000A"
+    },
+    {
+      "doc_id": "hold-0033",
+      "type": "IP_ADDRESS",
+      "value": "10.2.145.9"
+    },
+    {
+      "doc_id": "hold-0041",
+      "type": "IP_ADDRESS",
+      "value": "10.2.145.9"
+    },
+    {
+      "doc_id": "hold-0043",
+      "type": "IP_ADDRESS",
+      "value": "10.2.145.9"
+    },
+    {
+      "doc_id": "hold-0048",
+      "type": "IP_ADDRESS",
+      "value": "10.2.145.9"
+    }
+  ]
+}
